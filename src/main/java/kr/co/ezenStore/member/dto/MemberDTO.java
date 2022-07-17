@@ -1,5 +1,7 @@
 package kr.co.ezenStore.member.dto;
 
+import org.springframework.stereotype.Component;
+
 /*
     member_id varchar2(20 byte) primary key
     ,member_pw varchar2(30 byte)
@@ -23,6 +25,8 @@ package kr.co.ezenStore.member.dto;
     ,joindate   date    default sysdate
     ,del_yn     varchar2(20 byte) default 'N' * 
  */
+
+@Component("memberDTO")
 public class MemberDTO {
 
 	private String member_id;

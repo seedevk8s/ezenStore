@@ -15,6 +15,7 @@
 	<meta name="viewport" content="width=device-width" >
 	<title><tiles:insertAttribute name="title" /></title>
 	<link href="${contextPath}/resources/css/main.css" rel="stylesheet" type="text/css" media="screen" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 	<div id="outer_wrap">
@@ -24,7 +25,20 @@
 			</header>
 			<div class="clear"></div>
 			
+			<aside>
+				<tiles:insertAttribute name="side" />
+			</aside>
+			
+			<article>
+				<tiles:insertAttribute name="body" />
+			</article>
+			<div class="clear"></div>
+			
+			<footer>
+				<tiles:insertAttribute name="footer" />
+			</footer>			
 		</div>
+		<tiles:insertAttribute name="quickMenu" />
 	</div>
 </body>
 </html>

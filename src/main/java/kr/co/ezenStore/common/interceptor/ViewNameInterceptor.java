@@ -48,7 +48,6 @@ public class ViewNameInterceptor extends HandlerInterceptorAdapter {
 		
 		
 		String filename = uri.substring(begin, end);
-		System.out.println("filename0:    " + filename);
 		
 		//  /member/listMembers.do
 		if (filename.indexOf(".") != -1) {
@@ -60,6 +59,8 @@ public class ViewNameInterceptor extends HandlerInterceptorAdapter {
 			//  /member/listMembers.do 요청할 경우 member/listMembers를 파일이름으로 가져옴
 			filename = filename.substring(filename.lastIndexOf("/",1), filename.length());
 		}		
+		
+		System.out.println("uri :    " + filename);
 		
 		return filename;
 	}	
